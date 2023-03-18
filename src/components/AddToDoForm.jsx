@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function AddToDoForm({onAdd}) {
   const [content, setContent] = useState('');
@@ -10,7 +11,7 @@ export default function AddToDoForm({onAdd}) {
     if(content.trim().length === 0) {
       return;
     }
-    onAdd({id:'고유한 값', content, status:'active'});
+    onAdd({id:uuidv4(), content, status:'active'});
     setContent('');
   }
 
