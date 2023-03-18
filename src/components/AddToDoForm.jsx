@@ -7,6 +7,9 @@ export default function AddToDoForm({onAdd}) {
   };
   const handleSubmit = e => {
     e.preventDefault();
+    if(content.trim().length === 0) {
+      return;
+    }
     onAdd({id:'고유한 값', content, status:'active'});
     setContent('');
   }
