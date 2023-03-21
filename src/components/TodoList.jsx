@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import AddToDoForm from './AddToDoForm';
 import TodoItem from './TodoItem';
 
-export default function TodoList() {
+export default function TodoList({filter}) {
   const [todoList, setTodoList] = useState([
     {id:1, content:'공부하기', status:'active'},
     {id:2, content:'바둑 두기', status:'active'},
@@ -24,11 +24,21 @@ export default function TodoList() {
     setTodoList(todoList.filter(t => t.id !== deleted.id ));
   };
 
+  const filtered = getFilteredItem(todoList, filter);
+  
+  function getFilteredItem(todoList, filter) {
+    if(filter === 'all') {
+      return todoList;
+    }
+    return todoList.filter(todo => todo.status === filter);
+  }
+
   return (
     <section>
       <ul>
         {/* {todoList.map(item => <li key={item.id}>{item.content}</li>)} */}
-        {todoList.map((item) => <TodoItem key={item.id} todo={item} onUpdate={handleUpdate} onDelete={handleDelete} />
+        {/* {todoList.map((item) => <TodoItem key={item.id} todo={item} onUpdate={handleUpdate} onDelete={handleDelete} /> */}
+        {filtered.map((item) => <TodoItem key={item.id} todo={item} onUpdate={handleUpdate} onDelete={handleDelete} />
         )}
       </ul>
       <AddToDoForm onAdd={handleAdd} />
