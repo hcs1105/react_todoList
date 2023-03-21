@@ -1,3 +1,5 @@
+@charset "utf-8"; 
+
 :root {
   --color-bg-normal-mode:#fdfffd;
   --color-bg-dark-mode:#f7eaea;
@@ -30,11 +32,16 @@ ul {
   list-style:none;
 }
 
+button {
+  border:0 none;
+  background:none;
+}
+
 #root {
   width:100%;
   max-width:calc(100% - 150px);
-  padding:50px 0;
+  padding:0 0 30px;
   border-radius:1rem;
-  margin:30px auto;
+  margin:0 auto;
   background:var(--color-bg-dark-mode);
 }

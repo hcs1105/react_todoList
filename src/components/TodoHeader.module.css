@@ -1,0 +1,25 @@
+@charset "utf-8"; 
+
+.header {
+  background:var(--color-bg-dark-mode);
+  padding:30px 0 30px 30px;
+  border-bottom:1px solid #ccc;
+}
+
+.button_area {
+  text-align:center;
+}
+
+.button_filter {
+  margin-left:10px;
+  font-size:1.25rem;
+  text-transform:capitalize;
+}
+
+.button_filter:first-child {
+  margin-left:0;
+}
+
+.button_filter.active, .button_filter:hover {
+  color:var(--color-active);
+}
