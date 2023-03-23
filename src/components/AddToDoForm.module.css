@@ -15,3 +15,7 @@
   background:var(--color-active);
   color:#fff;
 }
+
+.todoButton:hover {
+  filter:brightness(125%);
+}
