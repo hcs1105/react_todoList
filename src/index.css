@@ -22,13 +22,18 @@ body {
   background:#ccc;
 }
 
+* {
+  box-sizing: border-box; 
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 ul {
-  padding-left:0;
+  padding:0;
+  margin:0;
   list-style:none;
 }
 
@@ -40,7 +45,7 @@ button {
 #root {
   width:100%;
   max-width:calc(100% - 150px);
-  padding:0 0 30px;
+  padding:0 0 20px;
   border-radius:1rem;
   margin:0 auto;
   background:var(--color-bg-dark-mode);

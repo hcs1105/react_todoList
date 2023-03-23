@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AddToDoForm from './AddToDoForm';
 import TodoItem from './TodoItem';
+import styles from './TodoList.module.css'
 
 export default function TodoList({filter}) {
   const [todoList, setTodoList] = useState([
@@ -34,14 +35,14 @@ export default function TodoList({filter}) {
   }
 
   return (
-    <section>
-      <ul>
+    <article className={styles.todoContainer}>
+      <ul className={styles.todoList}>
         {/* {todoList.map(item => <li key={item.id}>{item.content}</li>)} */}
         {/* {todoList.map((item) => <TodoItem key={item.id} todo={item} onUpdate={handleUpdate} onDelete={handleDelete} /> */}
         {filtered.map((item) => <TodoItem key={item.id} todo={item} onUpdate={handleUpdate} onDelete={handleDelete} />
         )}
       </ul>
       <AddToDoForm onAdd={handleAdd} />
-    </section>
+    </article>
   );
 } 

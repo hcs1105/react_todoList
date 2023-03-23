@@ -1,0 +1,17 @@
+@charset "utf-8"; 
+
+.todoListForm {
+  padding:20px 20px 0 20px;
+  display:flex;
+}
+
+.todoInputForm {
+  padding:8px 16px;
+  border:1px solid var(--color-active);
+  flex:1 0 auto;
+}
+
+.todoButton {
+  background:var(--color-active);
+  color:#fff;
+}
