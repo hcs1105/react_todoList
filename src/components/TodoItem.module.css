@@ -1,0 +1,38 @@
+@charset "utf-8"; 
+
+.todo {
+  padding:0.5rem 1rem;
+  margin:0.1rem 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:var(--colo-text);
+}
+
+.checkbox {
+  width:1.5rem;
+  height:1.5rem;
+}
+
+.content {
+  margin-left:0.5rem;
+  font-size:1.5rem;
+  flex:1 1 0%;
+}
+
+.button {
+  padding:6px 10px;
+  background:var(--color-gray);
+}
+
+.icon {
+  vertical-align:middle;
+}
+
+.button:hover {
+  background:var(--color-active);
+}
+
+.button:hover .icon {
+  fill:#fff;
+}
