@@ -6,6 +6,11 @@
   border-bottom:1px solid #ccc;
 }
 
+.icons {
+  width:1.25rem;
+  height:1.25rem;
+}
+
 .button_area {
   text-align:center;
 }
