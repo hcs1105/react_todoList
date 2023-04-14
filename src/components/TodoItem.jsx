@@ -14,7 +14,9 @@ export default function TodoItem({todo, onUpdate, onDelete}) {
     <li className={styles.todo}>
       <input type="checkbox" id="checkbox" className={styles.checkbox} checked={status === 'completed'} onChange={handleChange} />
       <label htmlFor="checkbox" className={styles.content}>{content}</label>
-      <button type="button" className={styles.button} onClick={handleDelete}><BsTrash3 class={styles.icon} /></button>
+      <button type="button" className={styles.button} onClick={handleDelete}>
+        <BsTrash3 className={styles.icon} />
+      </button>
     </li>
   );
 }
