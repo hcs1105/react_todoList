@@ -6,6 +6,7 @@
   --color-gray:#d1d1d1;
   --colo-text:#000;
   --color-active:#f16e03;
+  --color-scrollbar:#aaa7a7;
 }
 
 html, body {
@@ -20,6 +21,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background:#ccc;
+  accent-color:var(--color-active);
 }
 
 * {
@@ -50,4 +52,20 @@ button {
   border-radius:1rem;
   margin:0 auto;
   background:var(--color-bg-dark-mode);
+}
+
+::-webkit-scrollbar {
+  width:0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background:var(--color-bg-dark-mode);
+}
+
+::-webkit-scrollbar-thumb {
+  background:var(--color-scrollbar);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:var(--color-active);
 }
